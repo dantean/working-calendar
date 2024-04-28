@@ -25,6 +25,9 @@ WHEN I refresh the page
 ✅ THEN the saved events persist
 
 
+## Future Development
+
+I intend on re-visiting this application and adding additional functionality, like a checklist feature that can be added to each individual day, and expanding the calendar to cover a full month
 
 ## License
 
@@ -32,16 +35,18 @@ MIT License - The License file is provided here : (./LICENSE)
 
 ## Screenshot
 
-[insert link here]
+/assets/images/sample.gif
+
 
 ## Deployed Page and GitHub Repository
 
-Deployed Webpage : 
+Deployed Webpage : https://dantean.github.io/working-calendar/
 
-Github Repository: 
+Github Repository: https://github.com/dantean/working-calendar 
 
 
 ## Credit Where Credit Is Due
 
 - Instructor Phil loy for teaching us how to do this
-- 
+- ChatGPT for helping me identify and fix syntax errors which I should really be better at identifying on my own
+- My nephew Giovanni for encouraging me to stop being lazy and get my work done so that I can get a better job one day (that kid's gonna go farther than me)
