@@ -8,9 +8,9 @@ currentDayEl.text(currentDay.format("dddd, MMM DD"));
 
 for(i=9; i < 18; i++) {
 
-  parentId = $("hour-"+i)
+  parentId = $("#hour-"+i)
   textArea = parentId.children("textarea");
-  var loadEvent = localStorage.getitem("hour-"+i)
+  var loadEvent = localStorage.getItem("hour-"+i)
   textArea.val(loadEvent)
   if(i === currentHour) {
     textArea.addClass("present")
