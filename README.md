@@ -35,8 +35,8 @@ MIT License - The License file is provided here : (./LICENSE)
 
 ## Screenshot
 
-/assets/images/sample.gif
-
+Screenshots and gif example: ./assets/images/
+Online album for screenshots: https://imgur.com/a/Q7bJ82v
 
 ## Deployed Page and GitHub Repository
 
