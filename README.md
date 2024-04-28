@@ -36,6 +36,11 @@ WHEN I refresh the page
 
 ✅ THEN the saved events persist
 
+## How To Use
+
+Launch index.html and simply click on any hour-block and enter the text for your event. Click the "save" icon to the right, refresh the page (or check console log) to confirm that the event persists in local storage after refreshes. To remove an event, simply delete the text inside the hour-block and hit "save" again. 
+
+Das all :)
 
 ## Future Development
 
