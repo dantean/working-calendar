@@ -4,7 +4,7 @@ var currentDay = dayjs();
 var currentHour = dayjs().hour();
 var currentDayEl=$("#currentDay");
 var saveBtnEl = $(".saveBtn");
-currentDate.text(currentDate.format("dddd, MMM DD"));
+currentDayEl.text(currentDay.format("dddd, MMM DD"));
 
 for(i=9; i < 18; i++) {
 
