@@ -20,27 +20,13 @@ for(i=9; i < 18; i++) {
     textArea.addClass("future");
   } 
 }
+$(".container-lg").on("click", ".saveBtn", function(event) {
+  var button = $(this);  
+  var textAreaEl = button.siblings("textarea");  
+  var parentId = button.parent().attr("id");  
+  localStorage.setItem(parentId, textAreaEl.val()); 
+});
 
-// re-writing the save event since the original one was broken
-
-// function saveEvent(event) {
-//   var currentClickEl = $(event.target);
-//   var parentId;
-//   var textAreaEl;
-
-//   if(currentClickEl.attr("class") === "fas fa-save") {
-
-//     textAreaEl = currentClickEl.parent().siblings("textarea")
-//     parentId = currentClickEl.parent().parent().attr("id")
-//   } else {
-
-//     textAreaEl = currentClickEl.siblings("textarea")
-//     parentId = currentClickEl.parent().attr("id")
-//   }
-//   localStorage.setItem(parentId, textAreaEl.val())
-//   }
-  saveBtnEl.on("click", saveEvent)
-
-    console.log("~all elements are now loaded~");
-  });
+console.log("~all elements are now loaded~");
+});
   
