@@ -18,11 +18,26 @@ for(i=9; i < 18; i++) {
     textArea.addClass("past") 
   } else {
     textArea.addClass("future")
-  }
-  }
-  
+  } 
+}
 
+function saveEvent(event) {
+  var currentClickEl = $(event.target)
+  var parentId
+  var textAreaEl
 
+  if(currentClickEl.attr("class") === "fas fa-save") {
+
+    textAreaEl = currentClickEl.parent().siblings("textarea")
+    parentId = currentClickEl.parent().parent().attr("id")
+  } else {
+
+    textAreaEl = currentClickEl.siblings("textarea")
+    parentId = currentClickEl.parent().attr("id")
+  }
+  localStorage.setItem(parentId, textAreaEl.val())
+  }
+  saveBtnEl.on("click", saveEvent)
 
     console.log("~all elements are now loaded~");
   });
