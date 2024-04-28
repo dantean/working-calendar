@@ -7,36 +7,38 @@ var saveBtnEl = $(".saveBtn");
 currentDayEl.text(currentDay.format("dddd, MMM DD"));
 
 for(i=9; i < 18; i++) {
+  parentId = $("#hour-"+i);
+  textArea = parentId.find("textarea"); // .find should select the correct element more reliably than .children
+  var loadEvent = localStorage.getItem("hour-"+i);
 
-  parentId = $("#hour-"+i)
-  textArea = parentId.children("textarea");
-  var loadEvent = localStorage.getItem("hour-"+i)
-  textArea.val(loadEvent)
+  textArea.val(loadEvent);
   if(i === currentHour) {
-    textArea.addClass("present")
+    textArea.addClass("present");
   } else if (i < currentHour) {
-    textArea.addClass("past") 
+    textArea.addClass("past") ;
   } else {
-    textArea.addClass("future")
+    textArea.addClass("future");
   } 
 }
 
-function saveEvent(event) {
-  var currentClickEl = $(event.target)
-  var parentId
-  var textAreaEl
+// re-writing the save event since the original one was broken
 
-  if(currentClickEl.attr("class") === "fas fa-save") {
+// function saveEvent(event) {
+//   var currentClickEl = $(event.target);
+//   var parentId;
+//   var textAreaEl;
 
-    textAreaEl = currentClickEl.parent().siblings("textarea")
-    parentId = currentClickEl.parent().parent().attr("id")
-  } else {
+//   if(currentClickEl.attr("class") === "fas fa-save") {
 
-    textAreaEl = currentClickEl.siblings("textarea")
-    parentId = currentClickEl.parent().attr("id")
-  }
-  localStorage.setItem(parentId, textAreaEl.val())
-  }
+//     textAreaEl = currentClickEl.parent().siblings("textarea")
+//     parentId = currentClickEl.parent().parent().attr("id")
+//   } else {
+
+//     textAreaEl = currentClickEl.siblings("textarea")
+//     parentId = currentClickEl.parent().attr("id")
+//   }
+//   localStorage.setItem(parentId, textAreaEl.val())
+//   }
   saveBtnEl.on("click", saveEvent)
 
     console.log("~all elements are now loaded~");
